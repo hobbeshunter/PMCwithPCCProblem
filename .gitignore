@@ -1,0 +1,48 @@
+#
+# UE4 Project  (from AirSim)
+#
+#Unreal Engine
+StarterContent/
+Saved/
+!DefaultEditorPerProjectUserSettings.ini #contains use less CPU setting
+Binaries/
+Build/
+Archive/
+Debug/
+Intermediate/
+DerivedDataCache/
+UnrealHeaderTool/
+UnrealPak/
+obj/
+.vs/
+.vscode/
+.visuallint/
+*.VC.opendb
+*.VC.db
+*.opensdf
+*.sdf
+*.suo
+*_BuiltData.uasset
+*.pri
+*.workspace
+*.code-workspace
+*CodeCompletionFolders.txt
+*CodeLitePreProcessor.txt
+*.pro
+*.kdev4
+.kdev4/
+CMakeLists.txt
+Makefile
+
+#
+# CMake files
+#
+CMakeFiles/
+cmake_install.cmake
+CMakeCache.txt
+
+#
+# Clion
+#
+.idea
+cmake-build-*

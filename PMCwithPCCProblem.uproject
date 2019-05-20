@@ -1,0 +1,16 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{00048DB7-08D6-D7A4-CCE9-0B1A2598938D}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "PMCwithPCCProblem",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	]
+}
