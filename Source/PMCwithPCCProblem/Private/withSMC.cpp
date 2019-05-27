@@ -61,10 +61,10 @@ void AwithSMC::BeginPlay()
 	FRotator JointRotation = FRotator(0);
 	ConstraintComponent->SetRelativeRotation(JointRotation);
 	ConstraintComponent->SetRelativeLocation(JointShift);
-	ConstraintComponent->AttachToComponent(Cube1, FAttachmentTransformRules(EAttachmentRule::KeepRelative, false));
+	// ConstraintComponent->AttachToComponent(Cube1, FAttachmentTransformRules(EAttachmentRule::KeepRelative, false));
 	ConstraintComponent->SetConstrainedComponents(Cube1, NAME_None, Cube2, NAME_None);
-	ConstraintComponent->ComponentName1.ComponentName = TEXT("CubeSMC1");
-	ConstraintComponent->ComponentName2.ComponentName = TEXT("CubeSMC2");
+	// ConstraintComponent->ComponentName1.ComponentName = TEXT("CubeSMC1");
+	// ConstraintComponent->ComponentName2.ComponentName = TEXT("CubeSMC2");
 
 	ConstraintComponent->RegisterComponent();
 }

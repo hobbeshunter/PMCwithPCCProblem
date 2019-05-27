@@ -38,7 +38,7 @@ void AwithPMC::BeginPlay()
 	Cube1->SetCollisionProfileName(TEXT("Pawn"));
 	Cube1->SetRelativeRotation(FRotator(0));
 	Cube1->SetRelativeLocation(FVector(0, 0, 0));
-	Cube1->AttachToComponent(RootComponent, FAttachmentTransformRules(EAttachmentRule::KeepRelative, false));
+	Cube1->AttachToComponent(RootComponent, FAttachmentTransformRules(EAttachmentRule::KeepRelative, true));
 	Cube1->RegisterComponent();
 
 	auto Cube2 = NewObject< UProceduralMeshComponent >(this, TEXT("Cube2"));
@@ -53,7 +53,7 @@ void AwithPMC::BeginPlay()
 	Cube2->SetCollisionProfileName(TEXT("Pawn"));
 	Cube2->SetRelativeRotation(FRotator(0));
 	Cube2->SetRelativeLocation(FVector(30, 0, 30));
-	Cube2->AttachToComponent(Cube1, FAttachmentTransformRules(EAttachmentRule::KeepRelative, false));
+	Cube2->AttachToComponent(Cube1, FAttachmentTransformRules(EAttachmentRule::KeepRelative, true));
 	Cube2->RegisterComponent();
 
 	auto ConstraintComponent = NewObject< UPhysicsConstraintComponent >(this, TEXT("PhysicsTest"));
@@ -72,10 +72,10 @@ void AwithPMC::BeginPlay()
 	FRotator JointRotation = FRotator(0);
 	ConstraintComponent->SetRelativeRotation(JointRotation);
 	ConstraintComponent->SetRelativeLocation(JointShift);
-	ConstraintComponent->AttachToComponent(Cube1, FAttachmentTransformRules(EAttachmentRule::KeepRelative, false));
+	// ConstraintComponent->AttachToComponent(Cube1, FAttachmentTransformRules(EAttachmentRule::KeepRelative, true));
 	ConstraintComponent->SetConstrainedComponents(Cube1, NAME_None, Cube2, NAME_None);
-	ConstraintComponent->ComponentName1.ComponentName = TEXT("Cube1");
-	ConstraintComponent->ComponentName2.ComponentName = TEXT("Cube2");
+	// ConstraintComponent->ComponentName1.ComponentName = TEXT("Cube1");
+	// ConstraintComponent->ComponentName2.ComponentName = TEXT("Cube2");
 
 	ConstraintComponent->RegisterComponent();
 }
